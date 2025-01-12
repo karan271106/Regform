@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        input[type="radio"] {
+            width: auto;
+        }
+        button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Library Registration Form</h1>
+    <form action="send_mail.php" method="POST">
+        <label for="name">Student Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="regNo">Student Reg No:</label>
+        <input type="text" id="regNo" name="regNo" required />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male" required />
+        <label for="male" style="display: inline;">Male</label>
+        <input type="radio" id="female" name="gender" value="Female" required />
+        <label for="female" style="display: inline;">Female</label>
+
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+            <option value="" disabled selected>Select your course</option>
+            <option value="AI">AI</option>
+            <option value="DSA">DSA</option>
+            <option value="B.COM">B.COM</option>
+            <option value="B.COM CA">B.COM CA</option>
+            <option value="VISCOM">VISCOM</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="year">Year:</label>
+        <select id="year" name="year" required>
+            <option value="" disabled selected>Select year</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
